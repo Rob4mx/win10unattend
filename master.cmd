@@ -15,14 +15,17 @@ echo %PROCESSOR_IDENTIFIER% | find /i "AuthenticAMD">nul && (
 )
 echo 	Hecho.
 
-echo ========== Determinando tarjeta de video...
+echo ========== Determinando tarjeta(s) de video...
 for /f "tokens=4" %%a in ('pnputil /enum-devices /connected ^| find /i "PCI\"') do (
 	set hw_id=%%a
 	set hw_id=!hw_id:~4,17!
 	for /f "tokens=*" %%b in ('findstr /i "!hw_id!" db.txt') do (
+		for /f "tokens=1 delims==" %%c in ("%%b") do (
+			echo 	Encontrado %%c
+		)
 		for /f "tokens=3 delims==" %%c in ("%%b") do (
-			echo %%c
 			%%c
+			echo 	Hecho.
 		)
 	)
 )
@@ -41,4 +44,5 @@ REM timeout 2
 %SystemRoot%\System32\RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters
 
 echo 	Hecho. Proceda a activar Windows y Office.
+echo 	Si observa un texto de "No se encuentra", revisa bien tus carpetas en DRIVERS.
 pause
