@@ -1,6 +1,8 @@
 Intel
-UHD Graphics 630 = PCI\VEN_8086&DEV_9BC8 = %~d0\DRIVERS\Intel\Video_6+\setup.exe -s -s
+UHD Graphics 630 = PCI\VEN_8086&DEV_9BC5, PCI\VEN_8086&DEV_9BC8 = %~d0\DRIVERS\Intel\Video_6+\setup.exe -s -s
+UHD Graphics = PCI\VEN_8086&DEV_9B41, PCI\VEN_8086&DEV_9BC4 = %~d0\DRIVERS\Intel\Video_6+\setup.exe -s -s
 Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controller = PCI\VEN_8086&DEV_22B1 = %~d0\DRIVERS\Intel\Video_5-\setup.exe -s -s
+Atom Processor D4xx/D5xx/N4xx/N5xx Integrated Graphics Controller = PCI\VEN_8086&DEV_A001, PCI\VEN_8086&DEV_A002, PCI\VEN_8086&DEV_A011, PCI\VEN_8086&DEV_A012 = %~d0\DRIVERS\Intel\Video_5-\setup.exe -s -s
 
 nVIDIA
 GeForce GT 1030 = PCI\VEN_10DE&DEV_1D01 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
