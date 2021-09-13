@@ -5,6 +5,23 @@ Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controll
 Atom Processor D4xx/D5xx/N4xx/N5xx Integrated Graphics Controller = PCI\VEN_8086&DEV_A001, PCI\VEN_8086&DEV_A002, PCI\VEN_8086&DEV_A011, PCI\VEN_8086&DEV_A012 = %~d0\DRIVERS\Intel\Video_5-\setup.exe -s -s
 
 nVIDIA
+GeForce GT 1030 = PCI\VEN_10DE&DEV_0FC5 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
 GeForce GT 1030 = PCI\VEN_10DE&DEV_1D01 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1050 Ti = PCI\VEN_10DE&DEV_1C82 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1650 = PCI\VEN_10DE&DEV_1F0A, PCI\VEN_10DE&DEV_2188, PCI\VEN_10DE&DEV_1F82 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1650 SUPER = PCI\VEN_10DE&DEV_2187 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1660 = PCI\VEN_10DE&DEV_2184 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1660 SUPER = PCI\VEN_10DE&DEV_1F09, PCI\VEN_10DE&DEV_21C4 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce GTX 1660 Ti = PCI\VEN_10DE&DEV_2182 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 2060 = PCI\VEN_10DE&DEV_1E89 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 2060 SUPER = PCI\VEN_10DE&DEV_1F42, PCI\VEN_10DE&DEV_1F47, PCI\VEN_10DE&DEV_1F06 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3060 = PCI\VEN_10DE&DEV_2501, PCI\VEN_10DE&DEV_2503 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3060 Ti = PCI\VEN_10DE&DEV_2486 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3070 = PCI\VEN_10DE&DEV_2484 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3070 Ti = PCI\VEN_10DE&DEV_2482 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3080 = PCI\VEN_10DE&DEV_2206 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3080 Ti = PCI\VEN_10DE&DEV_2205 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
+GeForce RTX 3090 = PCI\VEN_10DE&DEV_2204 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
 
 AMD
+Kabini [Radeon HD 8280 / R3 Series] = PCI\VEN_1002&DEV_9836, PCI\VEN_1002&DEV_9838, PCI\VEN_1002&DEV_9830 = %~d0\DRIVERS\AMD\Radeon-Legacy\setup.exe -install
