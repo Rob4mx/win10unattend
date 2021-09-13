@@ -25,3 +25,5 @@ GeForce RTX 3090 = PCI\VEN_10DE&DEV_2204 = %~d0\DRIVERS\nVIDIA\setup.exe -s -n
 
 AMD
 Kabini [Radeon HD 8280 / R3 Series] = PCI\VEN_1002&DEV_9836, PCI\VEN_1002&DEV_9838, PCI\VEN_1002&DEV_9830 = %~d0\DRIVERS\AMD\Radeon-Legacy\setup.exe -install
+Wani [Radeon R5/R6/R7 Graphics] = PCI\VEN_1002&DEV_9874
+Picasso, Raven Ridge [Radeon Vega Series / Radeon Vega Mobile Series] = PCI\VEN_1002&DEV_15D8, PCI\VEN_1002&DEV_15DD
