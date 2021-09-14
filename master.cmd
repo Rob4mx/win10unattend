@@ -7,11 +7,11 @@ color f0
 echo ========== Determinando fabricante de Chipset...
 echo %PROCESSOR_IDENTIFIER% | find /i "GenuineIntel">nul && (
 	echo 	Chipset INTEL...
-	%~d0\Drivers\Intel\Chipset\setup.exe -s -norestart
+	cmd /c %~d0\Drivers\Intel\Chipset\setup.exe -s -norestart
 )
 echo %PROCESSOR_IDENTIFIER% | find /i "AuthenticAMD">nul && (
 	echo 	Chipset AMD...
-	%~d0\Drivers\AMD\Chipset\setup.exe -install
+	cmd /c %~d0\Drivers\AMD\Chipset\setup.exe -install
 )
 echo 	Hecho.
 
@@ -24,7 +24,7 @@ for /f "tokens=4" %%a in ('pnputil /enum-devices /connected ^| find /i "PCI\"') 
 			echo 	Encontrado %%c
 		)
 		for /f "tokens=3 delims==" %%c in ("%%b") do (
-			%%c
+			cmd /c %%c
 			echo 	Hecho.
 		)
 	)
