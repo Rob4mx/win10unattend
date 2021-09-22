@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+<settings pass="windowsPE">
+<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SetupUILanguage>
+<UILanguage>es-ES</UILanguage>
+</SetupUILanguage>
+<InputLocale>080a:0000080a</InputLocale>
+<SystemLocale>es-ES</SystemLocale>
+<UILanguage>es-ES</UILanguage>
+<UILanguageFallback>es-ES</UILanguageFallback>
+<UserLocale>es-MX</UserLocale>
+</component>
+<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<UserData>
+<ProductKey>
+<Key></Key>
+<WillShowUI>Never</WillShowUI>
+</ProductKey>
+<AcceptEula>true</AcceptEula>
+<FullName>user</FullName>
+<Organization></Organization>
+</UserData>
+</component>
+</settings>
+<settings pass="offlineServicing">
+<component name="Microsoft-Windows-LUA-Settings" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<EnableLUA>true</EnableLUA>
+</component>
+</settings>
+<settings pass="generalize">
+<component name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SkipRearm>1</SkipRearm>
+</component>
+</settings>
+<settings pass="specialize">
+<component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<InputLocale>080a:0000080a</InputLocale>
+<SystemLocale>es-MX</SystemLocale>
+<UILanguage>es-MX</UILanguage>
+<UILanguageFallback>es-MX</UILanguageFallback>
+<UserLocale>es-MX</UserLocale>
+</component>
+<component name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SkipAutoActivation>true</SkipAutoActivation>
+</component>
+<component name="Microsoft-Windows-SQMApi" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CEIPEnabled>0</CEIPEnabled>
+</component>
+<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ComputerName>user-PC</ComputerName>
+<ProductKey>VK7JG-NPHTM-C97JM-9MPGT-3V66T</ProductKey>
+</component>
+</settings>
+<settings pass="oobeSystem">
+<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AutoLogon>
+<Password>
+<Value></Value>
+<PlainText>true</PlainText>
+</Password>
+<Enabled>true</Enabled>
+<Username>USER</Username>
+</AutoLogon>
+<OOBE>
+<HideEULAPage>true</HideEULAPage>
+<HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+<NetworkLocation>Home</NetworkLocation>
+<SkipUserOOBE>true</SkipUserOOBE>
+<SkipMachineOOBE>true</SkipMachineOOBE>
+<ProtectYourPC>1</ProtectYourPC>
+</OOBE>
+<UserAccounts>
+<LocalAccounts>
+<LocalAccount wcm:action="add">
+<Password>
+<Value></Value>
+<PlainText>true</PlainText>
+</Password>
+<Description></Description>
+<DisplayName>user</DisplayName>
+<Group>Administrators</Group>
+<Name>USER</Name>
+</LocalAccount>
+</LocalAccounts>
+</UserAccounts>
+<RegisteredOrganization></RegisteredOrganization>
+<RegisteredOwner>user</RegisteredOwner>
+<DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+<FirstLogonCommands>
+<SynchronousCommand wcm:action="add">
+<Description>Control Panel View</Description>
+<Order>1</Order>
+<CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v StartupPage /t REG_DWORD /d 0 /f</CommandLine>
+<RequiresUserInput>true</RequiresUserInput>
+</SynchronousCommand>
+<SynchronousCommand wcm:action="add">
+<Order>2</Order>
+<Description>Control Panel Icon Size</Description>
+<RequiresUserInput>false</RequiresUserInput>
+<CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v AllItemsIconView /t REG_DWORD /d 1 /f</CommandLine>
+</SynchronousCommand>
+<SynchronousCommand wcm:action="add">
+<Order>3</Order>
+<RequiresUserInput>false</RequiresUserInput>
+<CommandLine>cmd /C wmic useraccount where name="user" set PasswordExpires=false</CommandLine>
+<Description>Password Never Expires</Description>
+</SynchronousCommand>
+</FirstLogonCommands>
+<TimeZone>Central Standard Time (Mexico)</TimeZone>
+</component>
+</settings>
+</unattend>
